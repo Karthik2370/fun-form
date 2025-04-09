@@ -1,0 +1,21 @@
+/* cursor.css */
+.custom-cursor {
+    cursor: none;
+  }
+  
+  .custom-cursor::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background: #0ff;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 9999;
+    transform: translate(calc(var(--x) - 50%), calc(var(--y) - 50%));
+    transition: transform 0.02s ease;
+  }
+  
